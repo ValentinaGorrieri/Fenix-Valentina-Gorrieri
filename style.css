@@ -1,0 +1,222 @@
+*{
+    margin: o;
+    padding: 0;
+    box-sizing: border-box;
+}
+.gridIndex{
+    width: 99%;
+    margin: 5px auto;
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: (3, 1fr);
+    grid-template-rows: repeat(3, auto); 
+    grid-template-areas:
+    "encabezado encabezado encabezado"
+    "section1 section1 section1"
+    "section2 section2 section2"
+    "footer footer footer";
+}
+/*menu*/
+.encabezado{
+grid-area: encabezado;
+background-image: linear-gradient(to bottom, rgba(115, 141, 214, 0.61), white);
+font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+display: flex;
+justify-content: space-between;
+}
+.logo{
+    width: 130px;
+    height: 60px;
+}
+.navBar ul{
+    display: flex;
+    flex-direction: row;
+    list-style-type: none;
+    justify-content: end;
+}
+.navBar ul li {
+    margin: 1rem 1rem;
+    color: white;
+    
+}
+.navBar ul li:hover{
+    background-color: white;
+    cursor: pointer;
+    color: black;
+    padding: 5px 5px 5px 5px;
+}
+/*imagen con escrita*/
+.section1{
+grid-area: section1;
+background-image:url(../IMG/fenix.png);
+background-repeat: none;
+background-size: cover;
+font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+color: rgb(250, 245, 245);
+padding-top: 20px;
+padding-bottom: 20px;
+width: auto;
+height: 500px;
+display: flex;
+flex-direction: column;
+padding-left: 20px;
+}
+.titolo{
+    font-size: 48px;
+    font-weight: 600;
+}
+.textoEncima{
+    font-size: 30px;
+}
+.section1 button{
+    border: solid 1px ;
+    background-color: rgb(245, 245, 245);
+    color: rgb(15, 15, 15);
+    }
+#button{
+    width: 100px;
+    height: 60px;
+    font-size: 16px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    border-radius: 10%;
+}
+/*tres anuncios con titulo*/
+.section2{
+grid-area: section2;
+background-color: rgb(115, 141, 214, 0.6);
+font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+color:   rgb(66, 66, 66);
+display:grid;
+grid-template-columns: 33,3% 33,3% 33.3%;
+grid-template-rows: 20% 80%;
+grid-template-areas: 
+"ofertas ofertas ofertas"
+"div1 div2 div3";
+}
+.ofertas{
+    grid-area: ofertas;
+    text-align: center;
+    color: rgb(29, 77, 211);
+}
+
+.div1{
+    grid-area: div1;
+    text-align: center;
+}
+.div2{
+    grid-area: div2;
+    text-align: center;
+}
+.div3{
+    grid-area: div3;
+    text-align: center;
+}
+/*footer*/
+.footer{
+grid-area: footer;
+background-color: rgb(115, 141, 214);
+display: flex;
+flex-direction: column;
+}
+.footer ul{
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+}
+ 
+.texto {
+    text-align: center;
+}
+/*responsive design-media query.mobile last*/
+/*mobile last=max width*/
+@media (max-width: 768px){
+
+    .gridIndex{
+        background-color:rgb(236, 236, 124);
+        grid-template-areas:
+    "encabezado encabezado encabezado"
+    "section2 section2 section2"
+    "footer footer footer";
+    }
+    .section1{
+        display: none;
+    }
+    .section2{
+        
+        grid-area: section2;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        color:   rgb(66, 66, 66);
+        display:grid;
+        grid-template-columns: 100%;
+        grid-template-rows: 20% 80%;
+        grid-template-areas: 
+        "ofertas "
+        "div1";
+        }
+}
+
+/*oportunidades*/
+.gridOpu{
+    width: 99%;
+    margin: 5px auto;
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: auto;
+    grid-template-rows: auto; 
+    grid-template-areas:
+    "encabezado"
+    "cuadrado"
+    "portalFlex"
+    "footer";
+}
+
+.cuadrado{
+    grid-area: cuadrado;
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    justify-content: center;
+    background-color: beige;
+    color: rgb(102, 99, 97);
+    height: 300px;
+    width: 40%;
+    margin: 60px auto 60px auto;
+    border: solid;
+    padding: 10px 10px 10px 10px;
+    border-style: solid;
+    border-color: yellow;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.portalFlex{
+    grid-area: portalFlex;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items:stretch;
+    justify-content: center;
+    margin-bottom: 40px;
+}
+
+#button1, #button2, #button3{
+    width: 200px;
+    height: 100px;
+    font-size: 18px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    border-radius: 10%;
+    border-color: yellow;
+    background-color: rgb(115, 141, 214, 0.6);
+}
+
+/*responsive design-media query.mobile last*/
+/*mobile last=max width*/
+@media (max-width: 768px){
+
+    .gridOpu{
+        background-color: beige;
+        grid-template-areas: "encabezado"
+        "cuadrado"
+        "portalFlex"
+        "footer";
+    }
+}
